@@ -1,5 +1,25 @@
-*,body{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+/* ETHNIC PATTERN (Footer Red #dc2626, 30% opacity) */
+.opacity-30 { opacity: 0.3; }
+
+/* FLOATING MOTIFS (Same Red, Slightly Larger) */
+.motif {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%23dc2626" d="M50 10c-22 0-40 18-40 40s18 40 40 40 40-18 40-40-18-40-40-40zm0 65c-13.8 0-25-11.2-25-25s11.2-25 25-25 25 11.2 25 25-11.2 25-25 25z"/></svg>') no-repeat center;
+    background-size: contain;
+    opacity: 0.25;
+    animation: float 18s infinite linear;
+    pointer-events: none;
+}
+
+.motif-1 { left: 10%; bottom: -10%; animation-delay: 0s; }
+.motif-2 { left: 28%; bottom: -15%; animation-delay: 4s; }
+.motif-3 { left: 50%; bottom: -20%; animation-delay: 8s; }
+.motif-4 { left: 72%; bottom: -12%; animation-delay: 12s; }
+.motif-5 { left: 90%; bottom: -18%; animation-delay: 15s; }
+
+@keyframes float {
+    0% { transform: translateY(0) rotate(0deg); opacity: 0.2; }
+    100% { transform: translateY(-120vh) rotate(360deg); opacity: 0; }
 }
